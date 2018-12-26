@@ -1,4 +1,4 @@
-package com.dmd.parkingIOT;
+package com.dmd.parking_iot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

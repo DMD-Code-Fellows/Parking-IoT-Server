@@ -1,6 +1,9 @@
 # Parking-IoT
 Our team name: DMD-Code-Fellows
 
+
+
+
 ## Problem Domain
 Create an Internet-of-Things (IoT) application, that automates parking space availability in a parking lot, so that drivers can
 quickly locate the nearest available space, in order to save time and fuel, and that also helps parking lot owners and attendants, 
@@ -33,6 +36,7 @@ The attendants monitor will display an up to date status of the parking lot's sp
 ### Technology
 
 #### Software
+
 - Java
 - Spring Boot
 - PostGre SQL

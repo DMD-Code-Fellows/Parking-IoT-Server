@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common :: head"></head>
+<body>
+<div class="container">
+    <span th:replace="common :: nav"></span>
+    <h1>Parking Lot IoT</h1>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <span class="panel-heading">Error</span>
+            <div class="panel-body">
+                <!-- TODO
+                    Below is a bit of exploration/research into the properties that
+                    are available in this error page, coming from the Spring error route.
+                    I've not been able to find a list online of what these properties are. The four
+                    used below do work (status, error, message, path), but they were from lab examples.
+                    What others are available?
+                    Also - on the thymesVar comments below, I've specified that the type is String, just
+                    to get the editor to stop complaining. But what is the correct type? Something from
+                    Spring Boot I assume.
+                    And, the line below with th:each="err....that is also exploration, hoping it might reveal
+                    the type. All of the below can be replaced as follows eventually:
+                        <div class="panel-body">
+                            <p>Status: <span th:text="${status}"></span>
+                            <p>Error: <span th:text="${error}"></span>
+                            <p>Message: <span th:text="${message}"></span>
+                            <p>Message: <span th:text="${path}"></span>
+                        </div>
+                -->
+                <p>Status: <!--/*@thymesVar id="status" type="java.util.String"*/-->
+                    <span th:text="${status}"></span></p>
+                <p>Error: <!--/*@thymesVar id="error" type="java.util.String"*/-->
+                    <span th:text="${error}"></span></p>
+                <p>Message: <!--/*@thymesVar id="message" type="java.util.String"*/-->
+                    <span th:text="${message}"></span></p>
+                <p>Message: <!--/*@thymesVar id="path" type="java.util.String"*/-->
+                    <span th:text="${path}"></span></p>
+                <ul>
+                    <li th:each="err : ${#fields.errors('*')}" th:text="${err}"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
