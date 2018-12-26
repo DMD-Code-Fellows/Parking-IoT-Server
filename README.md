@@ -1,10 +1,10 @@
-# Parking-IOT
-
+# Parking-IoT
 Our team name: DMD-Code-Fellows
 
-
 ## Problem Domain
-Creating a IOT based service to depit a parking lot and create a visual representation of open and unopen parking stalls for users to see.
+Create an Internet-of-Things (IoT) application, that automates parking space availability in a parking lot, so that drivers can
+quickly locate the nearest available space, in order to save time and fuel, and that also helps parking lot owners and attendants, 
+monitor and manage their lots.
 
 ## Background
 Inspired back the movement started in South Korea of using balloons to indicate unoccupied stalls (See article: https://popupcity.net/parking-balloons-help-drivers-save-gas/)
@@ -13,10 +13,7 @@ Nothing is more frustrating when time is spent grid-locked looking for an open p
 
 Instead of using a balloons which is naturally imperfect as it requires constant refiling and use of a non-renewable gas. We will be implementing the same concenpt with a Raspberry Pi device that would require less maintenance while providing each user a real-time update of a mapped out parking lot to show where they should head to to find an empty stall.
 
-
-
 https://github.com/DMD-Code-Fellows/Parking-IOT
-
 
 ## Features
 
@@ -32,6 +29,22 @@ The attendants monitor will display an up to date status of the parking lot's sp
 
 
 ## Setting Up The Environment
+
+### Technology
+
+#### Software
+- Java
+- Spring Boot
+- PostGre SQL
+
+#### Hardware
+- Raspberry Pi
+
+### Getting started with local development
+Spring boot apps require a database in order to run. If you are a developer, and want to work on this application, you'll need to
+setup a local database in order to run.
+See also: application.properties.
+
 
 ###### Current Phase:
 In Development
