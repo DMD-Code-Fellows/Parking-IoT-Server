@@ -3,7 +3,7 @@ package com.dmd.parking_iot;
 import javax.persistence.*;
 
 /**
- * A parking lot consisting of parking spaces.
+ * A parking lot consisting of rows of parking spaces.
  */
 @Entity
 public class ParkingLot {

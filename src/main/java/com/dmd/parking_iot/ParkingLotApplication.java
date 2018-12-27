@@ -11,14 +11,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * monitor and manage their lots.
  */
 @SpringBootApplication
-public class ParkingIotApplication {
+public class ParkingLotApplication {
 
 	/**
 	 * Standard Java application entry point.
 	 * @param args An array of application input arguments. Not used.
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(ParkingIotApplication.class, args);
+		SpringApplication.run(ParkingLotApplication.class, args);
 	}
 
 }
