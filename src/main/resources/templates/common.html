@@ -9,47 +9,61 @@
 </head>
 <body>
 
-<div th:fragment="nav">
-<header>
-    <div class="bg-dark collapse show" id="navbarHeader" style="">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">A hardware/software product that will allow users to discover available parking spaces in a parking lot, thereby saving time, and fuel. Sensors in each parking space automatically mark spaces as available, or unavailable, as drivers take, or leave them.</p>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Menu</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="/" class="text-white">Home</a></li>
-                        <li><a href="/space-map" class="text-white">Space Map</a></li>
-                        <li><a href="/register" class="text-white">Registration</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" focusable="false" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong>DMD</strong>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
-</header>
-</div>
 <!--<div th:fragment="nav">-->
-    <!--<nav>-->
-        <!--<ul class="list-inline">-->
-            <!--<li class="list-inline-item"><a href="/">Home</a></li>-->
-            <!--<li class="list-inline-item"><a href="/space-map">Space Map</a></li>-->
-            <!--<li class="list-inline-item"><a href="/register">Registration</a></li>-->
-        <!--</ul>-->
-    <!--</nav>-->
+<!--<header>-->
+    <!--<div class="bg-dark collapse show" id="navbarHeader" style="">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-8 col-md-7 py-4">-->
+                    <!--<h4 class="text-white">About</h4>-->
+                    <!--<p class="text-muted">A hardware/software product that will allow users to discover available parking spaces in a parking lot, thereby saving time, and fuel. Sensors in each parking space automatically mark spaces as available, or unavailable, as drivers take, or leave them.</p>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 offset-md-1 py-4">-->
+                    <!--<h4 class="text-white">Menu</h4>-->
+                    <!--<ul class="list-unstyled">-->
+                        <!--<li><a href="/" class="text-white">Home</a></li>-->
+                        <!--<li><a href="/space-map" class="text-white">Space Map</a></li>-->
+                        <!--<li><a href="/register" class="text-white">Registration</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="navbar navbar-dark bg-dark shadow-sm">-->
+        <!--<div class="container d-flex justify-content-between">-->
+            <!--<a href="#" class="navbar-brand d-flex align-items-center">-->
+                <!--<strong>DMD</strong>-->
+            <!--</a>-->
+            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">-->
+                <!--<span class="navbar-toggler-icon"></span>-->
+            <!--</button>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</header>-->
 <!--</div>-->
+
+<div th:fragment="nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DMD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/space-map">Space Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="/register">Sign Up</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
 </body>
 </html>
