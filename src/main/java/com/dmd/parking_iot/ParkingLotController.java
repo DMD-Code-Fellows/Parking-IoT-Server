@@ -1,5 +1,6 @@
 package com.dmd.parking_iot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,24 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class ParkingLotController {
+
+    /**
+     * The parking lot repository.
+     */
+    @Autowired
+    private ParkingLotRepository parkingLotRepository;
+
+    /**
+     * The parking lot row repository.
+     */
+    @Autowired
+    private ParkingLotRowRepository parkingLotRowRepository;
+
+    /**
+     * The parking space repository.
+     */
+    @Autowired
+    private ParkingSpaceRepository parkingSpaceRepository;
 
     /**
      * TODO

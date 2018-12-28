@@ -3,7 +3,7 @@ package com.dmd.parking_iot;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Java Spring Boot JPA Interface.
+ * Spring data repository interface for ParkingLot objects (JPA).
  */
 public interface ParkingLotRepository extends CrudRepository<ParkingLot, Long> {
 }

@@ -39,6 +39,7 @@ The attendants monitor will display an up to date status of the parking lot's sp
 
 - Java
 - Spring Boot
+- Spring Statemachine: https://projects.spring.io/spring-statemachine/
 - PostGre SQL
 
 #### Hardware
