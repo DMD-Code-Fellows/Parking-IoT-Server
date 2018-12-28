@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ParkingLotApplicationTests {
+public class ParkingIoTApplicationTests {
 
 	@Autowired
 	private ParkingLotController parkingLotController;
