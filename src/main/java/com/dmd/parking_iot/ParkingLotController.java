@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Spring Boot controller class for ParkingLot class.
  */
 @Controller
-public class
-ParkingLotController {
+public class ParkingLotController {
 
     /**
      * TODO
