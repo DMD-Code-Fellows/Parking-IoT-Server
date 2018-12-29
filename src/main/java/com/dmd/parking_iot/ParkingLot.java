@@ -1,6 +1,7 @@
 package com.dmd.parking_iot;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,6 +31,13 @@ public class ParkingLot {
     private final List<ParkingLotRow> parkingLotRows = new LinkedList<>();
 
     /**
+     * Constructor
+     */
+    public ParkingLot(String name) {
+        this.name = name;
+    }
+
+    /**
      * Getter method. Returns the name of this parking lot.
      * @return The parking lot name.
      */
@@ -43,5 +51,13 @@ public class ParkingLot {
      */
     public List<ParkingLotRow> getParkingLotRows() {
         return parkingLotRows;
+    }
+
+    /**
+     *
+     * @param rows
+     */
+    public void addAllParkingLotRows(ArrayList<ParkingLotRow> rows) {
+        parkingLotRows.addAll(rows);
     }
 }

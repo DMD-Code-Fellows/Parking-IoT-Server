@@ -1,6 +1,7 @@
 package com.dmd.parking_iot;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,7 +21,8 @@ class ParkingLotRow {
     /**
      * This rows name.
      */
-    private String rowName;
+    @Column(unique = true)
+    private String name;
 
     /**
      * The list of parking spaces in this row.
@@ -29,11 +31,19 @@ class ParkingLotRow {
     private final List<ParkingSpace> parkingSpaces = new LinkedList<>();
 
     /**
+     * Constructor.
+     * @param name The name of this row.
+     */
+    public ParkingLotRow(String name) {
+        this.name = name;
+    }
+
+    /**
      * Getter method. Returns the name of this row.
      * @return The name of this row.
      */
-    public String getRowName() {
-        return rowName;
+    public String getName() {
+        return name;
     }
 
     /**
@@ -42,5 +52,13 @@ class ParkingLotRow {
      */
     public List<ParkingSpace> getParkingSpaces() {
         return parkingSpaces;
+    }
+
+    /**
+     * Adds all the passed in parking space objects to the end of this row, in order.
+     * @param spaces The list of spaces to add to this row.
+     */
+    public void addAllParkingSpaces(ArrayList<ParkingSpace> spaces) {
+        parkingSpaces.addAll(spaces);
     }
 }
