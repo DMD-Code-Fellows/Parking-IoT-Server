@@ -10,7 +10,7 @@ import java.util.List;
  * A parking space for a vehicle.
  */
 @Entity
-@WithStateMachine
+//@WithStateMachine
 public class ParkingSpace {
 
     /**
@@ -19,6 +19,12 @@ public class ParkingSpace {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    /**
+     * This parking space name.
+     */
+    @Column(unique = true)
+    private String name;
 
     /**
      * The list of transactions involving this parking space.
@@ -30,6 +36,14 @@ public class ParkingSpace {
      * The current state of this parking space.
      */
     private ParkingSpaceStates status;
+
+    /**
+     * Constructor.
+     * @param name The name of this parking space.
+     */
+    public ParkingSpace(String name) {
+        this.name = name;
+    }
 
     /**
      * Changes state of this parking space to {@link ParkingSpaceStates#OCCUPIED}
@@ -77,5 +91,13 @@ public class ParkingSpace {
      */
     public ParkingSpaceStates getStatus() {
         return status;
+    }
+
+    /**
+     * Getter method. Returns the name of this parking space.
+     * @return The name of this parking space.
+     */
+    public String getName() {
+        return name;
     }
 }

@@ -20,9 +20,9 @@ public class ParkingIoTApplicationTests {
         assertThat(parkingLotController).isNotNull();
     }
 
-    @Test
-    public void testParkingSpaceStateMachine() {
-        ParkingSpace parkingSpace = new ParkingSpace();
-    }
+//    @Test
+//    public void testParkingSpaceStateMachine() {
+//        ParkingSpace parkingSpace = new ParkingSpace();
+//    }
 }
 
