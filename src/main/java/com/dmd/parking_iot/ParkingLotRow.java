@@ -31,6 +31,11 @@ class ParkingLotRow {
     private final List<ParkingSpace> parkingSpaces = new LinkedList<>();
 
     /**
+     * Default Constructor
+     */
+    public ParkingLotRow(){}
+
+    /**
      * Constructor.
      * @param name The name of this row.
      */

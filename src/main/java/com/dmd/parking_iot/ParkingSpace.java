@@ -38,11 +38,17 @@ public class ParkingSpace {
     private ParkingSpaceStates status;
 
     /**
+     * Default Constructor
+     */
+    ParkingSpace(){}
+
+    /**
      * Constructor.
      * @param name The name of this parking space.
      */
     public ParkingSpace(String name) {
         this.name = name;
+        this.status = ParkingSpaceStates.VACANT;
     }
 
     /**
@@ -101,3 +107,4 @@ public class ParkingSpace {
         return name;
     }
 }
+
