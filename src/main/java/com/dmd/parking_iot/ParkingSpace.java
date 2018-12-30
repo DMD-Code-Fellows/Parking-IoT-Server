@@ -23,7 +23,6 @@ public class ParkingSpace {
     /**
      * This parking space name.
      */
-    @Column(unique = true)
     private String name;
 
     /**
@@ -43,6 +42,7 @@ public class ParkingSpace {
      */
     public ParkingSpace(String name) {
         this.name = name;
+        this.status = ParkingSpaceStates.VACANT;
     }
 
     /**
