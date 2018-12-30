@@ -37,20 +37,17 @@
 <!--</div>-->
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+
     <table th:each="lot : ${lots}" class="table table-bordered">
         <thead>
+            <tr><td colspan="6">Drive ----></td></tr>
+            <tr th:each="row : ${lot.parkingLotRows}">
+                <th th:each="space : ${row.parkingSpaces}" scope="col" th:class="${space.currentStatus} ? bg-success : bg-danger"
+                ><b th:text="${space.name}"></b></th></tr>
+            <tr><td colspan="6"><---- Drive</td></tr>
 
-        <tr th:each="row : ${lot.parkingLotRows}">
-            <th th:each="space : ${row.parkingSpaces}"
-                scope="col" class="bg-success"><b th:text="${space.name}"></b></th>
-        </tr>
         </thead>
-        <tbody>
-        <td colspan="6">Drive ----></td>
-        </tbody>
     </table>
-
-
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

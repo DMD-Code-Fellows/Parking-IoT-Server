@@ -38,15 +38,22 @@ public class ParkingSpace {
     private ParkingSpaceStates status;
 
     /**
+     * The current status of this parking space.
+     */
+    private Boolean currentStatus;
+
+    /**
      * Default Constructor
      */
     ParkingSpace(){}
+
     /**
      * Constructor.
      * @param name The name of this parking space.
      */
-    public ParkingSpace(String name) {
+    public ParkingSpace(String name, Boolean currentStatus) {
         this.name = name;
+        this.currentStatus = currentStatus;
     }
 
     /**
@@ -104,4 +111,12 @@ public class ParkingSpace {
     public String getName() {
         return name;
     }
+
+    /**
+     * Getter method. Returns the status of occupancy of this parking space.
+     * @return
+     */
+    public Boolean getCurrentStatus() { return currentStatus;}
+
 }
+

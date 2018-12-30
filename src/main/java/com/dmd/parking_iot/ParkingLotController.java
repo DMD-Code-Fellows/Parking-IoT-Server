@@ -47,6 +47,11 @@ public class ParkingLotController {
         return "index";
     }
 
+    /**
+     * route mapping to the space-map page.
+     * @param m
+     * @return
+     */
     @RequestMapping(value = "/space-map", method = RequestMethod.GET)
     public String showSpace(Model m) {
         m.addAttribute("spaces", parkingSpaceRepository.findAll());

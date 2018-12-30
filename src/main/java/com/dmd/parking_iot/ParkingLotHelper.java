@@ -36,12 +36,12 @@ class ParkingLotHelper {
         // Setup row1
         ArrayList<ParkingSpace> spaces = new ArrayList<>();
         ParkingLotRow row1 = new ParkingLotRow(Constants.PARKING_LOT_ONE_R1_NAME);
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S1_NAME));
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S2_NAME));
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S3_NAME));
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S4_NAME));
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S5_NAME));
-        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S6_NAME));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S1_NAME, Constants.CURRENT_STATUS_OCCUPIED));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S2_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S3_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S4_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S5_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S6_NAME, Constants.CURRENT_STATUS_VACANT));
 //        parkingSpaceRepository.saveAll(spaces);
         row1.addAllParkingSpaces(spaces);
 //        parkingLotRowRepository.save(row1);
@@ -50,12 +50,12 @@ class ParkingLotHelper {
         // Setup row2
         ArrayList<ParkingSpace> spaces2 = new ArrayList<>();
         ParkingLotRow row2 = new ParkingLotRow(Constants.PARKING_LOT_ONE_R2_NAME);
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S1_NAME));
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S2_NAME));
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S3_NAME));
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S4_NAME));
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S5_NAME));
-        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S6_NAME));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S1_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S2_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S3_NAME, Constants.CURRENT_STATUS_OCCUPIED));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S4_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S5_NAME, Constants.CURRENT_STATUS_VACANT));
+        spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S6_NAME, Constants.CURRENT_STATUS_VACANT));
 //        parkingSpaceRepository.saveAll(spaces2);
         row2.addAllParkingSpaces(spaces2);
 //        parkingLotRowRepository.save(row2);

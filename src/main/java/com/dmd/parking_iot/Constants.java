@@ -26,4 +26,6 @@ final class Constants {
     static final String PARKING_LOT_ONE_R2_S4_NAME = "R2-4";
     static final String PARKING_LOT_ONE_R2_S5_NAME = "R2-5";
     static final String PARKING_LOT_ONE_R2_S6_NAME = "R2-6";
+    static final Boolean CURRENT_STATUS_VACANT = true;
+    static final Boolean CURRENT_STATUS_OCCUPIED = false;
 }
