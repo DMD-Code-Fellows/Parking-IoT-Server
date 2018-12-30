@@ -30,7 +30,7 @@ public class ParkingIoTApplicationTests {
 
     @Test
     public void getHomeWorks() {
-        assertThat(restTemplate.getForObject("http://localhost:" + port + "/", String.class)).contains("Inspired back the movement started in South Korea of using balloons to indicate unoccupied stalls");
+        assertThat(restTemplate.getForObject("http://localhost:" + port + "/", String.class)).contains("Inspired back the movement started in South Korea of using balloons");
     }
 
     //TODO Project Requirements:
