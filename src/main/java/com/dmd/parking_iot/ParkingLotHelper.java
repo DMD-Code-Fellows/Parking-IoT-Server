@@ -1,7 +1,5 @@
 package com.dmd.parking_iot;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.ArrayList;
 
 /**
@@ -11,24 +9,10 @@ import java.util.ArrayList;
  */
 class ParkingLotHelper {
 
-//    /**
-//     * The parking lot repository.
-//     */
-//    @Autowired
-//    private static ParkingLotRepository parkingLotRepository;
-//
-//    /**
-//     * The parking lot row repository.
-//     */
-//    @Autowired
-//    private static ParkingLotRowRepository parkingLotRowRepository;
-//
-//    /**
-//     * The parking space repository.
-//     */
-//    @Autowired
-//    private ParkingSpaceRepository parkingSpaceRepository;
-
+    /**
+     * Creates a 2x6 parking lot.
+     * @return The parking lot.
+     */
     static ParkingLot makeParkingLotOne() {
         ParkingLot parkingLot = new ParkingLot(Constants.PARKING_LOT_ONE_NAME);
         ArrayList<ParkingLotRow> rows = new ArrayList<>();
@@ -42,9 +26,7 @@ class ParkingLotHelper {
         spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S4_NAME));
         spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S5_NAME));
         spaces.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R1_S6_NAME));
-//        parkingSpaceRepository.saveAll(spaces);
         row1.addAllParkingSpaces(spaces);
-//        parkingLotRowRepository.save(row1);
         rows.add(row1);
 
         // Setup row2
@@ -56,15 +38,8 @@ class ParkingLotHelper {
         spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S4_NAME));
         spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S5_NAME));
         spaces2.add(new ParkingSpace(Constants.PARKING_LOT_ONE_R2_S6_NAME));
-//        parkingSpaceRepository.saveAll(spaces2);
         row2.addAllParkingSpaces(spaces2);
-//        parkingLotRowRepository.save(row2);
         rows.add(row2);
-
-        // Finally, define the parking lot's rows
-//        parkingLot.addAllParkingLotRows(rows);
-
-//        parkingLotRepository.save(parkingLot);
 
         parkingLot.addAllParkingLotRows(rows);
 

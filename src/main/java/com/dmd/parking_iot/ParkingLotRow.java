@@ -21,7 +21,6 @@ class ParkingLotRow {
     /**
      * This rows name.
      */
-    @Column(unique = true)
     private String name;
 
     /**
@@ -64,6 +63,10 @@ class ParkingLotRow {
      * @param spaces The list of spaces to add to this row.
      */
     public void addAllParkingSpaces(ArrayList<ParkingSpace> spaces) {
+        //TODO Enhance to ensure that no two spaces have the same name
+        if (spaces == null) {
+            throw new IllegalArgumentException("Error: invalid input - spaces to add is null!");
+        }
         parkingSpaces.addAll(spaces);
     }
 }

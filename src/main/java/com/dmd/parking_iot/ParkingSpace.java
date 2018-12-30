@@ -23,7 +23,6 @@ public class ParkingSpace {
     /**
      * This parking space name.
      */
-    @Column(unique = true)
     private String name;
 
     /**
