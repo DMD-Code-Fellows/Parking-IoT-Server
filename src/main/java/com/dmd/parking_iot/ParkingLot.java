@@ -59,8 +59,8 @@ public class ParkingLot {
      * @param rows The list of rows to add.
      */
     public void addAllParkingLotRows(ArrayList<ParkingLotRow> rows) {
-        //Enhance to ensure that no two rows have the same name
-        //Enhance to ensure that no two spaces have the same name
+        //TODO Enhance to ensure that no two rows have the same name
+        //TODO Enhance to ensure that no two spaces have the same name
         if (rows == null) {
             throw new IllegalArgumentException("Error: invalid input - rows to add is null");
         }
