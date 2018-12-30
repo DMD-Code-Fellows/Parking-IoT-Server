@@ -34,10 +34,7 @@ public class ParkingLot {
     /**
      * Constructor
      */
-    public ParkingLot(String name) {
-        this.name = name;
-
-    }
+    public ParkingLot(String name) { this.name = name; }
 
     /**
      * Getter method. Returns the name of this parking lot.
