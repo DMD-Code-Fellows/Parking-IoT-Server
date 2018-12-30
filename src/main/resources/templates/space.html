@@ -4,35 +4,53 @@
 <body>
 
 <div th:replace="common :: nav"></div>
+
+<!--<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">-->
+    <!--<table class="table table-bordered">-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th scope="col" class="bg-success">Stall 1</th>-->
+            <!--<th scope="col" class="bg-danger">Stall 2</th>-->
+            <!--<th scope="col" class="bg-success">Stall 3</th>-->
+            <!--<th scope="col" class="bg-danger">Stall 4</th>-->
+            <!--<th scope="col" class="bg-success">Stall 5</th>-->
+            <!--<th scope="col" class="bg-success">Stall 6</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<td colspan="6">Drive &#45;&#45;&ndash;&gt;</td>-->
+        <!--</tbody>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th scope="col" class="bg-success">Stall 7</th>-->
+            <!--<th scope="col" class="bg-success">Stall 8</th>-->
+            <!--<th scope="col" class="bg-success">Stall 9</th>-->
+            <!--<th scope="col" class="bg-success">Stall 10</th>-->
+            <!--<th scope="col" class="bg-danger">Stall 11</th>-->
+            <!--<th scope="col" class="bg-success">Stall 12</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<td colspan="6" class=""><-&#45;&#45;&#45;&#45;Drive</td>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
+
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <table class="table table-bordered">
+    <table th:each="lot : ${lots}" class="table table-bordered">
         <thead>
-        <tr>
-            <th scope="col" class="bg-success">Stall 1</th>
-            <th scope="col" class="bg-danger">Stall 2</th>
-            <th scope="col" class="bg-success">Stall 3</th>
-            <th scope="col" class="bg-danger">Stall 4</th>
-            <th scope="col" class="bg-success">Stall 5</th>
-            <th scope="col" class="bg-success">Stall 6</th>
+
+        <tr th:each="row : ${lot.parkingLotRows}">
+            <th th:each="space : ${row.parkingSpaces}"
+                scope="col" class="bg-success"><b th:text="${space.name}"></b></th>
         </tr>
         </thead>
         <tbody>
         <td colspan="6">Drive ----></td>
         </tbody>
-        <thead>
-        <tr>
-            <th scope="col" class="bg-success">Stall 7</th>
-            <th scope="col" class="bg-success">Stall 8</th>
-            <th scope="col" class="bg-success">Stall 9</th>
-            <th scope="col" class="bg-success">Stall 10</th>
-            <th scope="col" class="bg-danger">Stall 11</th>
-            <th scope="col" class="bg-success">Stall 12</th>
-        </tr>
-        </thead>
-        <tbody>
-        <td colspan="6" class=""><-----Drive</td>
-        </tbody>
     </table>
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

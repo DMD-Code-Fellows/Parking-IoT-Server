@@ -2,6 +2,7 @@ package com.dmd.parking_iot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -47,7 +48,10 @@ public class ParkingLotController {
     }
 
     @RequestMapping(value = "/space-map", method = RequestMethod.GET)
-    public String showSpace() {
+    public String showSpace(Model m) {
+        m.addAttribute("spaces", parkingSpaceRepository.findAll());
+        m.addAttribute("rows", parkingLotRowRepository.findAll());
+        m.addAttribute("lots", parkingLotRepository.findAll());
         return "space";
     }
 
