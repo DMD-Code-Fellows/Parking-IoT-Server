@@ -13,7 +13,7 @@
                 <td colspan="6">Drive ----></td>
             </tr>
             <tr th:each="row : ${lot.parkingLotRows}">
-                <th th:each="space : ${row.parkingSpaces}" scope="col" th:class="${space.status == 0} ? bg-success : bg-danger"
+                <th th:each="space : ${row.parkingSpaces}" scope="col" th:class="${space.status.name() == 'VACANT'} ? bg-success : bg-danger"
                 ><b th:text="${space.name}"></b></th>
             </tr>
             <tr>
