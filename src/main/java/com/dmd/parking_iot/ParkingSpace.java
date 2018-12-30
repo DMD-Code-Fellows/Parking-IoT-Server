@@ -37,6 +37,11 @@ public class ParkingSpace {
     private ParkingSpaceStates status;
 
     /**
+     * Default Constructor
+     */
+    ParkingSpace(){}
+
+    /**
      * Constructor.
      * @param name The name of this parking space.
      */
@@ -101,3 +106,4 @@ public class ParkingSpace {
         return name;
     }
 }
+
