@@ -46,8 +46,7 @@ public class ParkingLotController {
 //    private StateMachine<ParkingSpaceStates, ParkingSpaceEvents> parkingSpaceStateMachine;
 
     /**
-     * TODO
-     *  The template to map to the home page.
+     * Returns the path to the home page template index.html.
      */
     @GetMapping("/")
     public String home() {
@@ -55,7 +54,7 @@ public class ParkingLotController {
     }
 
     /**
-     * route mapping to the space-map page.
+     * Route mapping to the space-map page.
      * @param m the ParkingLot Object
      * @return The route to space.html
      */
@@ -65,6 +64,14 @@ public class ParkingLotController {
         return "space";
     }
 
+    /**
+     * Processes event parkingSpaceEvent, for parking space with name parkingSpaceName,
+     * contained in parking lot, with name parkingLotName.
+     * @param parkingLotName The unique name of the parking lot, which is used to find the parking space subject of the event.
+     * @param parkingSpaceName The parking space name, unique within the parking lot, subject to the event.
+     * @param parkingSpaceEvent The event to the parking space, to process.
+     * @return The route to space-map-updated.html.
+     */
     @RequestMapping(value = "/space-map/update", method = RequestMethod.PUT)
     public String processParkingSpaceEvent(
             @RequestParam String parkingLotName,
@@ -72,7 +79,6 @@ public class ParkingLotController {
             @RequestParam String parkingSpaceEvent) {
         ParkingLot parkingLot = parkingLotRepository.findByName(parkingLotName).get();
         ParkingSpace parkingSpace = parkingLot.findParkingSpaceForName(parkingSpaceName);
-        ParkingSpaceEvents.valueOf (parkingSpaceEvent);
         ParkingSpaceEvents event = ParkingSpaceEvents.valueOf(parkingSpaceEvent);
         switch (event) {
             case OCCUPY:
@@ -83,7 +89,8 @@ public class ParkingLotController {
                 parkingSpace.setStatus(ParkingSpaceStates.VACANT);
                 break;
         }
-
+        //TODO Create and save a new ParkingSpaceTransaction for this event
+        parkingLotRepository.save(parkingLot);
         return"space-map-updated";
     }
 

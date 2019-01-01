@@ -106,8 +106,11 @@ public class ParkingSpace {
         return name;
     }
 
+    /**
+     * Sets the state of this parking space to status.
+     * @param status The new state of this parking space.
+     */
     public void setStatus(ParkingSpaceStates status) {
         this.status = status;
     }
 }
-
