@@ -22,6 +22,11 @@ import java.util.EnumSet;
 @EnableStateMachine
 public class ParkingSpaceStateMachineConfig extends EnumStateMachineConfigurerAdapter<ParkingSpaceStates, ParkingSpaceEvents> {
 
+    /**
+     * TODO
+     * @param config
+     * @throws Exception
+     */
     @Override
     public void configure(StateMachineConfigurationConfigurer<ParkingSpaceStates, ParkingSpaceEvents> config)
             throws Exception {
@@ -31,6 +36,11 @@ public class ParkingSpaceStateMachineConfig extends EnumStateMachineConfigurerAd
                 .listener(listener());
     }
 
+    /**
+     * TODO
+     * @param states
+     * @throws Exception
+     */
     @Override
     public void configure(StateMachineStateConfigurer<ParkingSpaceStates, ParkingSpaceEvents> states)
             throws Exception {
@@ -40,6 +50,11 @@ public class ParkingSpaceStateMachineConfig extends EnumStateMachineConfigurerAd
                 .states(EnumSet.allOf(ParkingSpaceStates.class));
     }
 
+    /**
+     * TODO
+     * @param transitions
+     * @throws Exception
+     */
     @Override
     public void configure(StateMachineTransitionConfigurer<ParkingSpaceStates, ParkingSpaceEvents> transitions)
             throws Exception {
@@ -57,6 +72,10 @@ public class ParkingSpaceStateMachineConfig extends EnumStateMachineConfigurerAd
                 .source(ParkingSpaceStates.VACANT).target(ParkingSpaceStates.OUT_OF_SERVICE).event(ParkingSpaceEvents.REMOVE_FROM_SERVICE);
     }
 
+    /**
+     * TODO
+     * @return
+     */
     @Bean
     public StateMachineListener<ParkingSpaceStates, ParkingSpaceEvents> listener() {
         return new StateMachineListenerAdapter<ParkingSpaceStates, ParkingSpaceEvents>() {
