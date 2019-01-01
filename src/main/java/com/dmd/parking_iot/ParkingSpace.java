@@ -10,7 +10,7 @@ import java.util.List;
  * A parking space for a vehicle.
  */
 @Entity
-//@WithStateMachine
+@WithStateMachine
 public class ParkingSpace {
 
     /**
@@ -104,6 +104,10 @@ public class ParkingSpace {
      */
     public String getName() {
         return name;
+    }
+
+    public void setStatus(ParkingSpaceStates status) {
+        this.status = status;
     }
 }
 

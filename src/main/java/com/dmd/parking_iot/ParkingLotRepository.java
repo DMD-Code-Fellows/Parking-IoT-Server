@@ -14,5 +14,5 @@ public interface ParkingLotRepository extends CrudRepository<ParkingLot, Long> {
      * @param name The parking lot name for which to search.
      * @return The matching parking lot.
      */
-    public Optional<ParkingSpace> findByName(String name);
+    public Optional<ParkingLot> findByName(String name);
 }
