@@ -68,7 +68,7 @@ public class ParkingLot {
     }
 
     /**
-     * Convenience method that searched all the rows for a space with matching name.
+     * Convenience method that searches all the rows for a space with matching name.
      * @param name The name of the parking space to find.
      * @return The parking space with passed in name. May be null.
      */
