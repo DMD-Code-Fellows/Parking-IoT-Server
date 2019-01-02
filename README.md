@@ -1,7 +1,7 @@
 # Parking-IoT
 Our team name: DMD-Code-Fellows
 
-
+javadoc: https://dmd-code-fellows.github.io/Parking-IoT/com/dmd/parking_iot/package-summary.html
 
 
 ## Problem Domain
