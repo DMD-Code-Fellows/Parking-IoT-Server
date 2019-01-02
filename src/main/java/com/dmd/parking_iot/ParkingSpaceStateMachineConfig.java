@@ -1,5 +1,7 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingSpaceEvents;
+import com.dmd.iot.parking_iot.common.ParkingSpaceStates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.statemachine.config.EnableStateMachine;

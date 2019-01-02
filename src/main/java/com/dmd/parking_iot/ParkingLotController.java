@@ -1,5 +1,7 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingSpaceEvents;
+import com.dmd.iot.parking_iot.common.ParkingSpaceStates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
