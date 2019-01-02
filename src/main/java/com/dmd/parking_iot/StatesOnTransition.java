@@ -1,5 +1,6 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingSpaceStates;
 import org.springframework.statemachine.annotation.OnTransition;
 
 import java.lang.annotation.ElementType;

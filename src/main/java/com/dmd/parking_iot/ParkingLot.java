@@ -32,9 +32,14 @@ public class ParkingLot {
     @OneToMany
     private final List<ParkingLotRow> parkingLotRows = new LinkedList<>();
 
-    public ParkingLot(){};
     /**
-     * Constructor
+     * Default constructor.
+     */
+    public ParkingLot(){};
+
+    /**
+     * Constructor.
+     * @param name This parking lots name.
      */
     public ParkingLot(String name) { this.name = name; }
 
