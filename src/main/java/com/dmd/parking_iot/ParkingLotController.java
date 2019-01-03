@@ -83,6 +83,7 @@ public class ParkingLotController {
                 parkingSpace.setStatus(ParkingSpaceStates.VACANT);
                 break;
         }
+        parkingLotRepository.save(parkingLot);
 
         return"space-map-updated";
     }

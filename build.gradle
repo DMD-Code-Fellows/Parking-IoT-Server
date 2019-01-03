@@ -34,6 +34,7 @@ dependencies {
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	runtimeOnly('org.postgresql:postgresql')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	compile files('libs/parking-iot-common-1.0.0.jar')
 	//testImplementation('org.springframework.security:spring-security-test')
 }
 
