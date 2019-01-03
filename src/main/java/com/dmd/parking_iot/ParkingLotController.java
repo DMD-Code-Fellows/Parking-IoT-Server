@@ -91,7 +91,8 @@ public class ParkingLotController {
                 parkingSpace.setStatus(ParkingSpaceStates.VACANT);
                 break;
         }
-        //TODO Create and save a new ParkingSpaceTransaction for this event
+        ParkingSpaceTransaction transaction = new ParkingSpaceTransaction(event);
+        parkingSpace.addTransaction(transaction);
         parkingLotRepository.save(parkingLot);
         return"space-map-updated";
     }

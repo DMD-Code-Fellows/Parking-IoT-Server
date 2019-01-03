@@ -1,5 +1,7 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingSpaceEvents;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +29,14 @@ public class ParkingSpaceTransaction {
      * The event that triggered this transaction
      */
     private String event;
+
+    /**
+     * Constructor.
+     * @param event The event that occurred that triggered the transaction.
+     */
+    public ParkingSpaceTransaction(ParkingSpaceEvents event) {
+        this.event = event.toString();
+    }
 
     /**
      * Getter method. Returns the timestamp of this transaction.
