@@ -209,3 +209,6 @@ Temporary Items
 .vscode
 
 # End of https://www.gitignore.io/api/java,macos,android,androidstudio
+
+# Exception
+!/libs/*.*

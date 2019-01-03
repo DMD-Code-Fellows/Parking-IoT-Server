@@ -1,10 +1,12 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingSpaceStates;
 import org.springframework.statemachine.annotation.WithStateMachine;
 
 import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
+
 
 /**
  * A parking space for a vehicle.
@@ -106,8 +108,11 @@ public class ParkingSpace {
         return name;
     }
 
+    /**
+     * Sets the state of this parking space to status.
+     * @param status The new state of this parking space.
+     */
     public void setStatus(ParkingSpaceStates status) {
         this.status = status;
     }
 }
-
