@@ -115,4 +115,12 @@ public class ParkingSpace {
     public void setStatus(ParkingSpaceStates status) {
         this.status = status;
     }
+
+    /**
+     * Adds a new transaction to the end of this parking spaces history list.
+     * @param transaction The new transaction to add to this parking space.
+     */
+    public void addTransaction(ParkingSpaceTransaction transaction) {
+        transactions.add(transaction);
+    }
 }
