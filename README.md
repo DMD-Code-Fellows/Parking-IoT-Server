@@ -28,7 +28,8 @@ Whiteboard High Level:
 The only change to our original architecture write up, is that we elected to go with a browser based Attendant application, instead
 of a Java Swing application. It uses Java and Spring WebSockets.
 
-Design Models:
+Domain Model:
+![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/parking_iot_main.jpg "Domain Model")
 
 Parking Space State Model:
 ![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/ParkingSpaceStateModel.jpg "State Transition Diagram")
