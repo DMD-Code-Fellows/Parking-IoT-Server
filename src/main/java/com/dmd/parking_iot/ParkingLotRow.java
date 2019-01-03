@@ -27,6 +27,7 @@ class ParkingLotRow {
      * The list of parking spaces in this row.
      */
     @OneToMany
+    @OrderBy
     private final List<ParkingSpace> parkingSpaces = new LinkedList<>();
 
     /**
