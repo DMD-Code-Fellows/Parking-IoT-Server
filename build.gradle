@@ -44,3 +44,4 @@ dependencyManagement {
 		mavenBom "org.springframework.statemachine:spring-statemachine-bom:${springStatemachineVersion}"
 	}
 }
+
