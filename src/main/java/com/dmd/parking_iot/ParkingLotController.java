@@ -91,6 +91,7 @@ public class ParkingLotController {
                 parkingSpace.setStatus(ParkingSpaceStates.VACANT);
                 break;
         }
+
         ParkingSpaceTransaction transaction = new ParkingSpaceTransaction(event);
         parkingSpace.addTransaction(transaction);
         parkingLotRepository.save(parkingLot);
