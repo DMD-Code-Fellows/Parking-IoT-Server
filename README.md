@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://http://parking.my-dog-spot.com"> <img width="800" height="auto" src="libs/images/logo-banner.png" alt="DMD Banner">
+   <a href="https://http://parking.my-dog-spot.com"> <img width="700" height="auto" src="libs/images/logo-banner.png" alt="DMD Banner">
    </a>
 </p>
 
