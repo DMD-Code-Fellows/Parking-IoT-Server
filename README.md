@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
    <a href="https://http://parking.my-dog-spot.com"> <img width="500" height="auto" src="libs/img/logo-banner.png" alt="DMD Banner">
    </a>
@@ -34,7 +33,6 @@ An Internet-of-Things (IoT) application, that automates parking space availabili
 
 
 
-=======
 # Parking-IoT
 
 A Code Fellows 401 Java Team Project.
@@ -42,18 +40,15 @@ A Code Fellows 401 Java Team Project.
 An Internet-of-Things (IoT) application, that automates parking space availability in a parking lot, so that drivers can
 quickly locate the nearest available space, in order to save time and fuel, and that also helps parking lot owners and attendants, 
 monitor and manage their lots.
->>>>>>> 599cb1381d75a84bc38aee8fd5e59ebdb8c6f545
 
 ## Background
 Inspired by the movement started in South Korea of using balloons to indicate unoccupied stalls (See article: https://popupcity.net/parking-balloons-help-drivers-save-gas/)
 
-<<<<<<< HEAD
 ![car balloon](libs\img\car-balloon-3.jpg)
 
 Photo Credit: [Spring Wise](https://www.springwise.com/south-korea-vacant-parking-lots-automatically-alert-drivers-balloons-string/)
 
-=======
->>>>>>> 599cb1381d75a84bc38aee8fd5e59ebdb8c6f545
+
 Nothing is more frustrating when time is spent grid-locked looking for an open parking stall at a busy mall's parking lot during the holiday seasons. Based off a month-long study conducted in South Korea, a major oil company S-Oil estimated an average Seoul driver spends 9.3 miles per car a month looking for parking. With a study using balloons those commuters were able to reduce their consumption by more than 65%!
 
 ## Our Approach
@@ -68,11 +63,9 @@ Additionally, parking lot operations can be managed in real time, by attendants,
 
 ## Architecture and Design
 Whiteboard High Level:
-<<<<<<< HEAD
 ![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/ParkingSpaceStateModel.jpg "State Transition Diagram")
-=======
+
 ![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/Project%20assignments%205-6_wireframe.jpg "Architecture Big Picture")
->>>>>>> 599cb1381d75a84bc38aee8fd5e59ebdb8c6f545
 
 The only change to our original architecture write up, is that we elected to go with a browser based Attendant application, instead
 of a Java Swing application. It uses Java and Spring WebSockets.
@@ -100,7 +93,6 @@ Database Model:
 - PostGre SQL
 - Heroku
 - Gradle
-<<<<<<< HEAD
 - Wiringpi
 - Raspian OS
 - Pi4J
@@ -136,29 +128,18 @@ To run locally on localhost:8080
 ###### Physical Device Setup
 
 Navigate to [Physical-IoT](https://dmd-code-fellows.github.io/Parking-IoT-Physical/) to follow instructions on how to setup the device.
-
 #### Current Phase:
 - 1 - Official concept Release
-=======
 
 ### Hardware
 - Raspberry Pi
 See the client repository for more information: https://github.com/DMD-Code-Fellows/Parking-IoT-Physical
-
-### Getting started with local development
-Spring boot apps that use JPA, like this one, require a database in order to run. If you are a developer, and want to work on this application, you'll need to
-setup a local database in order to run.
-
-#### Current Phase:
-In Development
->>>>>>> 599cb1381d75a84bc38aee8fd5e59ebdb8c6f545
 
 #### For Contribution Only Purposes:
 - Only applicable to current members of the organization, git clone the project repository into a local directory.
 - All work must be done on a unique branch that indicates the contributor and the feature.
 - All merges from local branches can only be into the test branch. Approval from organization member is required prior to merging to master for publication 
 
-<<<<<<< HEAD
 ## Organization
 - [Parking-IoT-Server](https://dmd-code-fellows.github.io/Parking-IoT-Server/)
 - [Parking-IoT-Common](https://dmd-code-fellows.github.io/Parking-IoT-Common/)
@@ -169,10 +150,4 @@ In Development
 ## License
 
 Parking-IoT-Server is licensed under the APache License, Version 2.0 [Apache License](http://www.apache.org/licenses/LICENSE-2.0)
-=======
-## Documentation:
-- Parking-IoT-Server: https://dmd-code-fellows.github.io/Parking-IoT-Server/
-- Parking-IoT-Common: https://dmd-code-fellows.github.io/Parking-IoT-Common/
-- Parking-IoT-Attendant: TODO 
-- Parking-IoT-Physical: TODO
->>>>>>> 599cb1381d75a84bc38aee8fd5e59ebdb8c6f545
+
