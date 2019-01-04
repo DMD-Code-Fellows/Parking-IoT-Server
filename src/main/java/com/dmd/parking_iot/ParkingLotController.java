@@ -93,6 +93,7 @@ public class ParkingLotController {
         }
 
         ParkingSpaceTransaction transaction = new ParkingSpaceTransaction(event);
+        parkingSpaceTransactionRepository.save(transaction);
         parkingSpace.addTransaction(transaction);
         parkingLotRepository.save(parkingLot);
         return"space-map-updated";
