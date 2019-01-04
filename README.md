@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://http://parking.my-dog-spot.com"> <img width="500" height="auto" src="libs/img/logo-banner.png" alt="DMD Banner">
+   <a href="https://http://parking.my-dog-spot.com"> <img width="500" height="auto" src="libs/images/logo-banner.png" alt="DMD Banner">
    </a>
 </p>
 
@@ -8,7 +8,7 @@
 
 #### A Code Fellows 401 Java Team Project.
 
-![car balloon](libs\img\car-balloon-1.jpg)
+![car balloon](libs\images\car-balloon-1.jpg)
 
 Photo Credit: [Freakonmics](http://freakonomics.com/2013/08/16/how-to-save-time-hunting-for-a-parking-spot-south-korea-edition/)
 
@@ -44,7 +44,7 @@ monitor and manage their lots.
 ## Background
 Inspired by the movement started in South Korea of using balloons to indicate unoccupied stalls (See article: https://popupcity.net/parking-balloons-help-drivers-save-gas/)
 
-![car balloon](libs\img\car-balloon-3.jpg)
+![car balloon](libs\images\car-balloon-3.jpg)
 
 Photo Credit: [Spring Wise](https://www.springwise.com/south-korea-vacant-parking-lots-automatically-alert-drivers-balloons-string/)
 
