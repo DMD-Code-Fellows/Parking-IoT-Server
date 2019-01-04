@@ -4,7 +4,6 @@
 </p>
 
 
-
 # Parking-IoT
 
 #### A Code Fellows 401 Java Team Project.
