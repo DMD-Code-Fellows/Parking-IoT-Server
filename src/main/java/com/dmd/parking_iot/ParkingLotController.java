@@ -1,5 +1,6 @@
 package com.dmd.parking_iot;
 
+import com.dmd.iot.parking_iot.common.ParkingLotExample;
 import com.dmd.iot.parking_iot.common.ParkingSpaceEvents;
 import com.dmd.iot.parking_iot.common.ParkingSpaceStates;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,14 +108,17 @@ public class ParkingLotController {
      */
     @RequestMapping(value = "/space-map/reset", method = RequestMethod.GET)
     public RedirectView resetParkingLot() {
-        ParkingLot parkingLot = ParkingLotHelper.makeParkingLotOne();
-        ParkingLotRow row;
-        for (int i = 0; i < parkingLot.getParkingLotRows().size(); i++) {
-            row = parkingLot.getParkingLotRows().get(i);
-            parkingSpaceRepository.saveAll(row.getParkingSpaces());
+        //Make sure example parking lot doesn't already exist.
+        if (!parkingLotRepository.findByName(ParkingLotExample.PARKING_LOT_ONE_NAME).isPresent()) {
+            ParkingLot parkingLot = ParkingLotHelper.makeParkingLotOne();
+            ParkingLotRow row;
+            for (int i = 0; i < parkingLot.getParkingLotRows().size(); i++) {
+                row = parkingLot.getParkingLotRows().get(i);
+                parkingSpaceRepository.saveAll(row.getParkingSpaces());
+            }
+            parkingLotRowRepository.saveAll(parkingLot.getParkingLotRows());
+            parkingLotRepository.save(parkingLot);
         }
-        parkingLotRowRepository.saveAll(parkingLot.getParkingLotRows());
-        parkingLotRepository.save(parkingLot);
         return new RedirectView("/space-map");
     }
 }

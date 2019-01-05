@@ -26,9 +26,10 @@ class ParkingLotRow {
     /**
      * The list of parking spaces in this row.
      */
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @OrderBy
     private final List<ParkingSpace> parkingSpaces = new LinkedList<>();
+    //We made it EAGER to make testing work. That's a hack.
 
     /**
      * Default Constructor
