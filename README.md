@@ -63,8 +63,6 @@ Additionally, parking lot operations can be managed in real time, by attendants,
 
 ## Architecture and Design
 Whiteboard High Level:
-![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/ParkingSpaceStateModel.jpg "State Transition Diagram")
-
 ![alt text](https://github.com/DMD-Code-Fellows/Parking-IoT-Server/blob/master/docs/Project%20assignments%205-6_wireframe.jpg "Architecture Big Picture")
 
 The only change to our original architecture write up, is that we elected to go with a browser based Attendant application, instead
