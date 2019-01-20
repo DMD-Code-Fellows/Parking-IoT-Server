@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- In general, prefer inlining head elements/nav elements in your error template, so that if the error is in your fragments, you don't get into an infinite error loop. -->
 <head th:replace="common :: head"></head>
 <body>
 <div class="container">

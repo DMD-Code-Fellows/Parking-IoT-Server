@@ -15,6 +15,7 @@ import org.springframework.statemachine.state.State;
 
 import java.util.EnumSet;
 
+// Good to use the documentation, but I'd prefer if you didn't leave the TODOs sprinkled about the code afterwards. Either fill in the javadoc, or get rid of it.
 /**
  * Configurator for the parking space state machine. Sets up the valid parking space states and their transitions.
  * This code is based on the API documentation:

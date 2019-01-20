@@ -91,16 +91,18 @@ public class ParkingLotController {
             case VACATE:
                 parkingSpace.setStatus(ParkingSpaceStates.VACANT);
                 break;
+                // there are two more cases than this!
         }
 
         ParkingSpaceTransaction transaction = new ParkingSpaceTransaction(event);
         parkingSpaceTransactionRepository.save(transaction);
         parkingSpace.addTransaction(transaction);
         parkingLotRepository.save(parkingLot);
-        return"space-map-updated";
+        return "space-map-updated";
     }
 
     //TODO there must be a better way than with a route. Something we could add to main?
+    // Doing this with a route is reasonable enough! My big recommendation is not to make it a GET request, since those should be idempotent; instead, make it a POST or DELETE request, instead.
     /**
      * This method is for project demo purposes only. If things go haywire with lot data,
      * or if you just want to reset to a known point for presentation purposes, use it.
