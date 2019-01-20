@@ -32,6 +32,7 @@ public class ParkingLot {
     @OneToMany(fetch = FetchType.EAGER)
     private final List<ParkingLotRow> parkingLotRows = new LinkedList<>();
     //We made it EAGER to make testing work. That's a hack.
+    // That's a fine hack. Doesn't mess up anything else.
 
     /**
      * Default constructor.

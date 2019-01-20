@@ -46,6 +46,7 @@ public class ParkingSpaceTransaction {
         return timestamp;
     }
 
+    // I think it's a bit sad that you set this as a ParkingSpaceEvent, but get it as a String--I'd redo the conversion here before returning.
     /**
      * Getter method. Returns the event that triggered this transaction.
      * @return The event that triggered this transaction.
